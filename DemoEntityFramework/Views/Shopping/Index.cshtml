@@ -1,0 +1,32 @@
+﻿@using DemoEntityFramework.Models
+@model IEnumerable<OrderDetail>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <td>@Html.DisplayNameFor(m => m.OrderGuid)</td>
+            <td>@Html.DisplayNameFor(m => m.UserId)</td>
+            <td>@Html.DisplayNameFor(m => m.ProductName)</td>
+            <td>@Html.DisplayNameFor(m => m.Price)</td>
+            <td>@Html.DisplayNameFor(m => m.Quantity)</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.OrderGuid</td>
+                <td>@item.UserId</td>
+                <td>@item.ProductName</td>
+                <td>@item.Price</td>
+                <td>@item.Quantity</td>
+            </tr>
+        }
+
+    </tbody>
+</table>
+
